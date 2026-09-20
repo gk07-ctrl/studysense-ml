@@ -18,3 +18,4 @@ models/*.pkl
 reports/figures/*.png
 reports/figures/*.jpg
 reports/figures/*.svg
+app_backup.py

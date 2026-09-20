@@ -1,0 +1,66 @@
+{
+  "random_state": 42,
+  "test_size": 0.2,
+  "n_train": 160,
+  "n_test": 40,
+  "feature_columns": [
+    "study_hours",
+    "sleep_hours",
+    "attendance",
+    "previous_score",
+    "assignments_completed",
+    "concentration"
+  ],
+  "regression_target": "final_score",
+  "classification_target": "support_needed",
+  "support_needed_threshold": 70,
+  "support_needed_rule": "support_needed is 1 when final_score is below 70, and 0 otherwise. This cutoff is a simple demo rule for this educational project, not an official academic policy.",
+  "class_counts": {
+    "support_needed_0": 167,
+    "support_needed_1": 33
+  },
+  "regression_selection_metric": "r2",
+  "classification_selection_metric": "f1",
+  "selected_regression_model": "Ridge",
+  "selected_classification_model": "LogisticRegression",
+  "metrics_path": "reports/metrics.json",
+  "regression_model_path": "models/best_regression.joblib",
+  "classification_model_path": "models/best_classification.joblib",
+  "regression": {
+    "LinearRegression": {
+      "mae": 3.523711273577517,
+      "rmse": 4.493034842413609,
+      "r2": 0.8629607230350754
+    },
+    "Ridge": {
+      "mae": 3.514537266636512,
+      "rmse": 4.492017928040209,
+      "r2": 0.8630227485678854
+    },
+    "DecisionTreeRegressor": {
+      "mae": 6.495045371295371,
+      "rmse": 8.302600414537412,
+      "r2": 0.5320561334126656
+    }
+  },
+  "classification": {
+    "LogisticRegression": {
+      "accuracy": 0.925,
+      "precision": 0.8333333333333334,
+      "recall": 0.7142857142857143,
+      "f1": 0.7692307692307693
+    },
+    "DecisionTreeClassifier": {
+      "accuracy": 0.85,
+      "precision": 0.5714285714285714,
+      "recall": 0.5714285714285714,
+      "f1": 0.5714285714285714
+    },
+    "RandomForestClassifier": {
+      "accuracy": 0.875,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444444
+    }
+  }
+}
